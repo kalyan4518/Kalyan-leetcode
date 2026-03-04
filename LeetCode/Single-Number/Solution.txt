@@ -1,0 +1,12 @@
+1class Solution {
+2    public int singleNumber(int[] nums)
+3    {
+4        
+5        int check=0;
+6        for(int i=0;i<nums.length;i++)
+7        {
+8            check=check^nums[i];
+9        }
+10        return check;
+11    }
+12}
