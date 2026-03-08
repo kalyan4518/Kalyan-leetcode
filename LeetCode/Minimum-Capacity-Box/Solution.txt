@@ -1,0 +1,31 @@
+1class Solution {
+2    public int minimumIndex(int[] capacity, int itemSize) 
+3    {
+4        int ans=-1;
+5        int check=0;
+6        int min=Integer.MAX_VALUE;
+7        for(int i=0;i<capacity.length;i++)
+8        {
+9            int a=capacity[i];
+10                if(a==itemSize)
+11                {
+12                    ans=i;
+13                    return ans;
+14                }
+15            if(a>itemSize&&a<min)
+16            {
+17                min=a;
+18            }
+19        }
+20        for(int i=0;i<capacity.length;i++)
+21            {
+22                int a=capacity[i];
+23                if(a==min)
+24                {
+25                    ans=i;
+26                    break;
+27                }
+28            }
+29        return ans;
+30    }
+31}
