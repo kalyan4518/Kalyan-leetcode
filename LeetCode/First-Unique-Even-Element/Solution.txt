@@ -1,0 +1,24 @@
+1class Solution {
+2    public int firstUniqueEven(int[] nums) 
+3    {
+4        int ans=-1;;
+5        int max=Arrays.stream(nums).max().getAsInt();
+6        int freq[]=new int[max+1];
+7        for(int i=0;i<nums.length;i++)
+8            {
+9                if(nums[i]%2==0)
+10                {
+11                    freq[nums[i]]++;
+12                }
+13            }
+14        for(int i=0;i<nums.length;i++)
+15            {
+16               if(nums[i]%2==0&&freq[nums[i]]==1)
+17               {
+18                   ans=nums[i];
+19                   break;
+20               }
+21            }
+22        return ans;
+23    }
+24}
