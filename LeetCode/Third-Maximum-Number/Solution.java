@@ -24,9 +24,9 @@
 24            else if(nums[i]>m3)
 25            m3=nums[i];
 26        }
-27        if(m3==Long.MIN_VALUE)
-28        return (int)m1;
+27        if(m3!=Long.MIN_VALUE)
+28        return (int)m3;
 29
-30        return (int)m3;
+30        return (int)m1;
 31    }
 32}
