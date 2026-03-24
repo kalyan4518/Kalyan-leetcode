@@ -1,0 +1,26 @@
+1class Solution 
+2{
+3    public boolean uniformArray(int[] nums1)
+4    {
+5        int oc=0,ec=0;
+6        for(int i=0;i<nums1.length;i++)
+7        {
+8            if(nums1[i]%2==0) 
+9                ec++;
+10            else 
+11                oc++;
+12
+13        }
+14            boolean eans=false;
+15            boolean   oans=false;
+16
+17            if(oc==0||oc>=2)
+18                eans =true;
+19    
+20
+21            if(ec==0||oc>=1)
+22                oans=true;
+23
+24            return oans||eans;
+25        }
+26    }
