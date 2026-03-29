@@ -1,0 +1,17 @@
+1class Solution {
+2    public int firstMatchingIndex(String s)
+3  { 
+4         int i=0;
+5        int j=s.length()-1;
+6
+7        while(i<=j) {
+8            if(s.charAt(i) == s.charAt(j))
+9            {
+10                return i;
+11            }
+12            i++;
+13            j--;
+14        }
+15
+16        return -1;
+17  }}
