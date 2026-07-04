@@ -1,0 +1,21 @@
+1class Solution {
+2    public boolean isMiddleElementUnique(int[] nums) {
+3        int mid = nums[nums.length / 2];
+4        int seeee = 0;
+5        int i = 0, j = nums.length-1;
+6
+7        while (i <= j) 
+8        {
+9            if (nums[i] == mid) 
+10                {
+11                    seeee++;
+12                }
+13            if (i!=j&&nums[j]==mid)
+14                seeee++;
+15            i++;
+16            j--;
+17        }
+18
+19        return seeee == 1;
+20    }
+21}
